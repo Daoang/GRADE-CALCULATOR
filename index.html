@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STI Weighted Grade Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <p class="made-by">Made by John Rey C. Dao-ang</p>
+        
+        <h1>📊 STI Grade Calculator</h1>
+        
+        <div class="input-group">
+            <label for="prelim">Prelim Grade (20%):</label>
+            <input type="number" id="prelim" min="0" max="100" step="0.01" placeholder="e.g., 90.5">
+        </div>
+
+        <div class="input-group">
+            <label for="midterm">Midterm Grade (20%):</label>
+            <input type="number" id="midterm" min="0" max="100" step="0.01" placeholder="e.g., 88.0">
+        </div>
+
+        <div class="input-group">
+            <label for="prefinals">Pre-Finals Grade (20%):</label>
+            <input type="number" id="prefinals" min="0" max="100" step="0.01" placeholder="e.g., 92.5">
+        </div>
+
+        <div class="input-group">
+            <label for="finals">Finals Grade (40%):</label>
+            <input type="number" id="finals" min="0" max="100" step="0.01" placeholder="e.g., 85.0">
+        </div>
+
+        <button onclick="calculateGrade()">Compute Final Grade</button>
+
+        <div class="result-box" id="resultBox">
+            <p class="result-label">Computed Final Percentage Grade:</p>
+            <p class="result-value" id="percentageResult">--</p>
+
+            <p class="result-label">Equivalent Grade:</p>
+            <p class="result-value" id="equivalentResult">--</p>
+            
+            <p class="result-label">Remarks:</p>
+            <p class="result-value" id="remarksResult">--</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Your Grading System Equivalent:</p>
+        <div class="grade-table">
+            <div>97.50 - 100% (1.00) Excellent</div>
+            <div>94.50 - 97.49% (1.25) Very Good</div>
+            <div>91.50 - 94.49% (1.50) Very Good</div>
+            <div>86.50 - 91.49% (1.75) Very Good</div>
+            <div>81.50 - 86.49% (2.00) Satisfactory</div>
+            <div>76.00 - 81.49% (2.25) Satisfactory</div>
+            <div>70.50 - 75.99% (2.50) Satisfactory</div>
+            <div>65.00 - 70.49% (2.75) Fair</div>
+            <div>59.50 - 64.99% (3.00) Fair</div>
+            <div>59.49% and below (5.00) Failed</div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

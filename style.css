@@ -1,0 +1,146 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6; /* Light, calming background */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+.container {
+    background: #ffffff;
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 500px;
+    margin: 20px 0;
+}
+
+/* New Style for the 'Made By' line */
+.made-by {
+    text-align: center;
+    color: #999;
+    font-size: 0.85em;
+    margin-bottom: 5px;
+}
+
+h1 {
+    color: #007bff; /* Primary color for header */
+    text-align: center;
+    margin-top: 0; /* Adjust margin since 'made-by' is now above */
+    margin-bottom: 5px;
+    font-size: 2em;
+}
+
+.description {
+    text-align: center;
+    color: #666;
+    margin-bottom: 25px;
+    font-size: 1.1em;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #28a745; /* Success color for the button */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+button:active {
+    transform: scale(0.99);
+}
+
+.result-box {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #e9f5ff; /* Light blue background for results */
+    border-radius: 10px;
+    border-left: 5px solid #007bff;
+}
+
+.result-label {
+    margin: 0;
+    font-size: 0.9em;
+    color: #007bff;
+    font-weight: 600;
+}
+
+.result-value {
+    margin: 5px 0 15px 0;
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Footer for Grading System Reference */
+footer {
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+footer p {
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.grade-table {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    font-size: 0.9em;
+    text-align: left;
+}
+
+.grade-table div {
+    padding: 5px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
