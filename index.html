@@ -3,62 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STI Weighted Grade Calculator</title>
+    <title>STI Grade Calculator Fairview</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <div class="theme-toggle" onclick="toggleTheme()">
+        <span class="theme-icon">🌙</span>
+    </div>
+
     <div class="container">
-        <p class="made-by">Made by John Rey C. Dao-ang</p>
+        <p class="made-by">Developed by Reeey</p>
         
-        <h1>📊 STI Grade Calculator</h1>
+        <h1>STI Grade Calculator</h1>
         
         <div class="input-group">
             <label for="prelim">Prelim Grade (20%):</label>
-            <input type="number" id="prelim" min="0" max="100" step="0.01" placeholder="e.g., 90.5">
+            <div class="input-wrapper">
+                <input type="number" id="prelim" min="0" max="100" step="0.01" placeholder="e.g., 90.5">
+                <span class="input-icon">📝</span>
+            </div>
         </div>
 
         <div class="input-group">
             <label for="midterm">Midterm Grade (20%):</label>
-            <input type="number" id="midterm" min="0" max="100" step="0.01" placeholder="e.g., 88.0">
+            <div class="input-wrapper">
+                <input type="number" id="midterm" min="0" max="100" step="0.01" placeholder="e.g., 88.0">
+                <span class="input-icon">📚</span>
+            </div>
         </div>
 
         <div class="input-group">
             <label for="prefinals">Pre-Finals Grade (20%):</label>
-            <input type="number" id="prefinals" min="0" max="100" step="0.01" placeholder="e.g., 92.5">
+            <div class="input-wrapper">
+                <input type="number" id="prefinals" min="0" max="100" step="0.01" placeholder="e.g., 92.5">
+                <span class="input-icon">✍️</span>
+            </div>
         </div>
 
         <div class="input-group">
             <label for="finals">Finals Grade (40%):</label>
-            <input type="number" id="finals" min="0" max="100" step="0.01" placeholder="e.g., 85.0">
+            <div class="input-wrapper">
+                <input type="number" id="finals" min="0" max="100" step="0.01" placeholder="e.g., 85.0">
+                <span class="input-icon">🎯</span>
+            </div>
         </div>
 
-        <button onclick="calculateGrade()">Compute Final Grade</button>
+        <button onclick="calculateGrade()">
+            <span class="button-text">Compute Final Grade</span>
+            <span class="button-icon">✨</span>
+        </button>
 
         <div class="result-box" id="resultBox">
-            <p class="result-label">Computed Final Percentage Grade:</p>
-            <p class="result-value" id="percentageResult">--</p>
+            <div class="result-item">
+                <p class="result-label">Final Percentage Grade</p>
+                <p class="result-value" id="percentageResult">--</p>
+            </div>
 
-            <p class="result-label">Equivalent Grade:</p>
-            <p class="result-value" id="equivalentResult">--</p>
+            <div class="result-divider"></div>
+
+            <div class="result-item">
+                <p class="result-label">Equivalent Grade</p>
+                <p class="result-value grade-equivalent" id="equivalentResult">--</p>
+            </div>
+
+            <div class="result-divider"></div>
             
-            <p class="result-label">Remarks:</p>
-            <p class="result-value" id="remarksResult">--</p>
+            <div class="result-item">
+                <p class="result-label">Remarks</p>
+                <p class="result-value remarks" id="remarksResult">--</p>
+            </div>
         </div>
     </div>
 
     <footer>
-        <p>Your Grading System Equivalent:</p>
+        <p class="footer-title">📋 Grading System Reference</p>
         <div class="grade-table">
-            <div>97.50 - 100% (1.00) Excellent</div>
-            <div>94.50 - 97.49% (1.25) Very Good</div>
-            <div>91.50 - 94.49% (1.50) Very Good</div>
-            <div>86.50 - 91.49% (1.75) Very Good</div>
-            <div>81.50 - 86.49% (2.00) Satisfactory</div>
-            <div>76.00 - 81.49% (2.25) Satisfactory</div>
-            <div>70.50 - 75.99% (2.50) Satisfactory</div>
-            <div>65.00 - 70.49% (2.75) Fair</div>
-            <div>59.50 - 64.99% (3.00) Fair</div>
-            <div>59.49% and below (5.00) Failed</div>
+            <div class="grade-item">
+                <span class="grade-range">97.50 - 100%</span>
+                <span class="grade-equiv">1.00</span>
+                <span class="grade-remark excellent">Excellent</span>
+            </div>
+            <div class="grade-item">
+                <span class="grade-range">94.50 - 97.49%</span>
+                <span class="grade-equiv">1.25</span>
+                <span class="grade-remark very-good">Very Good</span>
+            </div>
+            <div class="grade-item">
+                <span class="grade-range">91.50 - 94.49%</span>
+                <span class="grade-equiv">1.50</span>
+                <span class="grade-remark very-good">Very Good</span>
+            </div>
+            <div class="grade-item">
+                <span class="grade-range">86.50 - 91.49%</span>
+                <span class="grade-equiv">1.75</span>
+                <span class="grade-remark very-good">Very Good</span>
+            </div>
+            <div class="grade-item">
+                <span class="grade-range">81.50 - 86.49%</span>
+                <span class="grade-equiv">2.00</span>
+                <span class="grade-remark satisfactory">Satisfactory</span>
+            </div>
+            <div class="grade-item">
+                <span class="grade-range">76.00 - 81.49%</span>
+                <span class="grade-equiv">2.25</span>
+                <span class="grade-remark satisfactory">Satisfactory</span>
+            </div>
+            <div class="grade-item">
+                <span class="grade-range">70.50 - 75.99%</span>
+                <span class="grade-equiv">2.50</span>
+                <span class="grade-remark satisfactory">Satisfactory</span>
+            </div>
+            <div class="grade-item">
+                <span class="grade-range">65.00 - 70.49%</span>
+                <span class="grade-equiv">2.75</span>
+                <span class="grade-remark fair">Fair</span>
+            </div>
+            <div class="grade-item">
+                <span class="grade-range">59.50 - 64.99%</span>
+                <span class="grade-equiv">3.00</span>
+                <span class="grade-remark fair">Fair</span>
+            </div>
+            <div class="grade-item">
+                <span class="grade-range">Below 59.50%</span>
+                <span class="grade-equiv">5.00</span>
+                <span class="grade-remark failed">Failed</span>
+            </div>
         </div>
     </footer>
 
